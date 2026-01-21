@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box; 
+}
+
+:root {
+    --primary-green: #89b37c;
+    --dark-text: #444;
+    --light-bg: #fdfdfd;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    color: var(--dark-text);
+}
+
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Sidebar (Gauche) */
+.sidebar {
+    width: 35%;
+    background: #f2fbf2;
+    padding: 30px 20px;
+    border-right: 2px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .cv-container { flex-direction: column; }
+    .sidebar, .main-content { width: 100%; }
+}
+
+.profile-pic {
+    width: 225px;
+    height: 225px;
+    border: 6px solid var(--primary-green);
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.profile-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-family: 'Dancing Script', cursive;
+    color: var(--primary-green);
+    text-align: center;
+    /* font-size: 2rem; */
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.sidebar-title {
+    color: var(--primary-green);
+    border-bottom: 1px solid var(--primary-green);
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+/* Contenu Principal (Droite) */
+.main-content {
+    width: 65%;
+    padding: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.job-title-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.job-title {
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    color: var(--primary-green);
+    text-transform: italic;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+
+.highlight {
+    background-color: #89b37c22; /* Fond léger pour la section expérience */
+    padding: 5px;
+}
+
+.experience-item {
+    border-left: 4px solid #6fbf73;
+    padding-left: 10px;
+}
+
+.header-exp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.age {
+    display: flex;
+    justify-content: center;
+}
+
+mark {
+    background-color: var(--primary-green);
+}
+
+a {
+    color: blue;
+}
+
+a:hover {
+    color: #6fbf73;
+}
+
+.logo {
+    width: 20px;
+    height: 20px; 
+}
+
+.clignote {
+    color:green;
+  animation: clignote 2s linear infinite;
+}
+@keyframes clignote {  
+  50% { opacity: 0; }
+}
+
+.tab-droits {
+    height: 100px;
+    width: 600px
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+}
+
+.main-pages {
+    width: 50%;
+    padding: 30px;
+    background-color: cornsilk;
+}
