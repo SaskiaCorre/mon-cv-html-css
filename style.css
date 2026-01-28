@@ -1,23 +1,33 @@
-* {
+/* * {
     box-sizing: border-box; 
-}
+} */
 
 :root {
+    --accent: #6fbf73;      /* vert sobre */
+    --accent-dark: #4fa85a;
+    --dark-green: #6d9662;
     --primary-green: #89b37c;
     --dark-text: #444;
     --light-bg: #fdfdfd;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
     background-color: #f0f0f0;
     margin: 0;
     padding: 20px;
     color: var(--dark-text);
 }
 
+ul {
+    margin-top: 0px;
+    /* margin-bottom: 0px; */
+}
+
 .cv-container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     background: white;
     display: flex;
@@ -27,7 +37,7 @@ body {
 /* Sidebar (Gauche) */
 .sidebar {
     width: 35%;
-    background: #f2fbf2;
+    background: #f9fafb;
     padding: 30px 20px;
     border-right: 2px solid #eee;
 }
@@ -38,10 +48,10 @@ body {
 }
 
 .profile-pic {
-    width: 225px;
-    height: 225px;
+    width: 160px;
+    height: 217px;
     border: 6px solid var(--primary-green);
-    border-radius: 50%;
+    /* border-radius: 50%; */
     margin: 0 auto;
     overflow: hidden;
 }
@@ -53,11 +63,10 @@ body {
 }
 
 .name {
-    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Dancing Script', cursive; */
     color: var(--primary-green);
     text-align: center;
-    /* font-size: 2rem; */
-    font-size: 50px;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -65,7 +74,7 @@ body {
     color: var(--primary-green);
     border-bottom: 1px solid var(--primary-green);
     font-size: 1.2rem;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 /* Contenu Principal (Droite) */
@@ -83,19 +92,25 @@ body {
 
 .job-title-container {
     text-align: center;
-    margin-bottom: 40px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+
+.content-block {
+    margin-top: 50px;
 }
 
 .job-title {
     color: var(--primary-green);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     letter-spacing: 2px;
 }
 
 .section-title {
     color: var(--primary-green);
-    text-transform: italic;
-    font-family: 'Dancing Script', cursive;
+    /* text-transform: italic;
+    font-family: 'Dancing Script', cursive; */
     font-size: 1.5rem;
 }
 
@@ -107,6 +122,7 @@ body {
 .experience-item {
     border-left: 4px solid #6fbf73;
     padding-left: 10px;
+    margin-bottom: 30px;
 }
 
 .header-exp {
@@ -125,10 +141,12 @@ mark {
 
 a {
     color: blue;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover {
-    color: #6fbf73;
+    text-decoration: underline;
 }
 
 .logo {
@@ -137,11 +155,15 @@ a:hover {
 }
 
 .clignote {
-    color:green;
-  animation: clignote 2s linear infinite;
+  animation: clignote 1.4s infinite;
+  font-weight: 600;
+  color: var(--primary-green);
 }
-@keyframes clignote {  
-  50% { opacity: 0; }
+
+@keyframes clignote {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.3; }
+  100% { opacity: 1; }
 }
 
 .tab-droits {
@@ -156,7 +178,19 @@ a:hover {
 }
 
 .main-pages {
-    width: 50%;
+    /* width: 75%; */
     padding: 30px;
     background-color: cornsilk;
+}
+
+@media (max-width: 800px) {
+    .main-pages { flex-direction: column; }
+    .tab-droits, .topo, .autres-pages { width: 100%; }
+}
+
+/* Changer la couleur de toutes vos icônes en vert */
+.fa-solid, .fa-brands {
+    color: var(--dark-green);
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+    font-size: 1.2rem;
 }

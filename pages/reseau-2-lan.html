@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saskia Corre | Topologie : Mise en réseau de 2 LAN</title>
+    <link rel="stylesheet" href=".\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="project-nav">
+        <div class="nav-container">
+            <a href="..\index.html" class="nav-link">
+                <i class="fa-solid fa-circle-arrow-left"></i>
+                Retour au CV
+            </a>
+            <div class="nav-projects">
+                <a href="..\pages\serveur-dhcp.html" class="nav-link">Serveur DHCP</a>
+                <a href="..\pages\serveur-glpi.html" class="nav-link">Serveur GLPI</a>
+                <a class="nav-link active">Réseau 2 LAN</a>
+                <a href="..\pages\2-lan-dhcp.html" class="nav-link">2 LAN & DHCP</a> 
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-pages">
+        <article class="project-card">
+            <header class="project-header">
+                <h1>Connecter 2 LAN avec Packet Tracer</h1>
+                <div class="badge">Architecture Réseau & Routage</div>
+            </header>
+
+            <section class="project-section">
+                <h3><i class='far fa-clipboard'></i> Scénario</h3>
+                <p>En tant qu’administrateur réseaux dans une DSI d’une PME, vous êtes amenés à concevoir des
+                configurations réseaux. L’objet de la présente demande concerne la mise en réseau de deux LAN (Site A et
+                Site B) via un routeur.<br/>
+                Votre travail est alors de concevoir la topologie sur Packet Tracer représentant la configuration réseau
+                finale attendue.</p>
+                
+                <div class="image-container">
+                    <p class="image-caption">Schéma de la topologie cible</p>
+                    <img class="topo" src="..\img\topologie_2.png" alt="Topologie réseau DHCP">
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3><i class="fa-solid fa-network-wired"></i> Mission</h3>
+                <ul class="mission-list">
+                    <li>Créer la topologie comme représentée par le schéma partie 1</li>
+                    <li>Configurer les composants de cette topologie avec des IP statiques</li>
+                    <li>Valider le bon fonctionnement de votre réseau par des ping entre les terminaux des deux LAN</li>
+                </ul>
+            </section>
+
+            <footer class="project-footer">
+                <h3><i class='fa-solid fa-lightbulb' style='font-size:24px'></i> Résultat</h3>
+                <a href="https://drive.google.com/file/d/18fz1V83x0uoo2-ISoCqCBnGP4U55S4sM/view?usp=drive_link" class="btn-download" target="_blank">
+                    Télécharger la topologie Cisco Packet Tracer
+                </a>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>
